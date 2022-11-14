@@ -1,9 +1,26 @@
 
     // Create Dino Constructor
-
+    function Dino(dino) {
+        this.species = dino.species,
+        this.weight = dino.weight,
+        this.height = dino.height,
+        this.diet = dino.diet,
+        this.fact = dino.fact;
+    }
 
     // Create Dino Objects
-
+    const dinoData = () => {
+        return fetch("/dino.json")
+        .then((res) => res.json())
+        .then((data) => {
+            return data.Dinos.map((dino) => {
+                dino => new Dino(dino)
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    };
 
     // Create Human Object
 
