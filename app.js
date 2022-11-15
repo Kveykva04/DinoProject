@@ -43,20 +43,43 @@
 
     // Create Dino Compare Method 1
     // NOTE: Weight in JSON file is in lbs, height in inches. 
-    function compare1(){
-            
+    function compareWeight(dino){
+        if(dino.weight > human.weight){
+            const fact = "The " + dino.name + " is " + (dino.weight-human.weight) + " pounds heavier than you.";
+        }
+        else
+        {
+            const fact = "You are " + (human.weight-dino.weight) + " pounds heavier than the " + dino.name + ".";
+        }
     }
     
     // Create Dino Compare Method 2
     // NOTE: Weight in JSON file is in lbs, height in inches.
-    function compare2(){
-        
+    function compareHeight(dino){
+        const humanHeight = human.heightFeet*12 + human.heightInches;
+        if(dino.height > humanHeight){
+            const fact = "The " + dino.name + " is " + (dino.height-humanHeight) + " inches taller than you.";
+        }
+        else
+        {
+            const fact = "You are " + (humanHeight-dino.height) + " inches taller than the " + dino.name + ".";
+        }
     }
     
     // Create Dino Compare Method 3
     // NOTE: Weight in JSON file is in lbs, height in inches.
-    function compare3(){
-        
+    function compareDiet(dino){
+        if(dino.diet.equals("carnivore")){
+            const fact = "The " + dino.name + " is a carnivore so watch out!";
+        }
+        else if(dino.diet.equals("omnivore"))
+        {
+            const fact = "The " + dino.name + " is an omnivore so it can still eat you!";
+        }
+        else
+        {
+            const fact = "The " + dino.name + " is a herbivore so don't worry!";
+        }
     }
 
     // Generate Tiles for each Dino in Array
