@@ -1,3 +1,8 @@
+/**credits for help
+ * https://www.w3schools.com/jsref
+ * Udacity Knowledge section
+ */
+
 
     // Create Dino Constructor
     function Dino(dino) {
